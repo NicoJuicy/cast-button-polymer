@@ -1,0 +1,25 @@
+{
+  "name": "cast-button-polymer",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pengying/cast-button-polymer",
+  "authors": [
+    "Peng Ying <pying@google.com>"
+  ],
+  "description": "cast button built on polymer to simplify Chromecast integration",
+  "main": "cast-button-polymer.html",
+  "keywords": [
+    "cast",
+    "polymer"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5"
+  }
+}
