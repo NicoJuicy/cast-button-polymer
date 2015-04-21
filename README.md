@@ -74,7 +74,7 @@ In the `polymer-ready` event instantiate the CastManager object and set the fiel
     }
 
 
-#Controlling content
+##Controlling content
 The CastManager object has methods to control the casting media.  In the code below, we're adding 
 a click handler to the play button which plays the cast media.
 
