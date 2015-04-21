@@ -64,7 +64,7 @@ Create a media object following the format below
       "largeImageUrl": "//commondatastorage.googleapis.com/gtv-videos-bucket/sample/images_780x1200/BigBuckBunny-780x1200.jpg"
     };
     
-In the `polymer-ready` event instianate the CastManager object and set the field on the cast-button.
+In the `polymer-ready` event instantiate the CastManager object and set the field on the cast-button.
 
     window.addEventListener('polymer-ready', function() {
       var castButton = document.getElementById("cast_button");
@@ -75,8 +75,8 @@ In the `polymer-ready` event instianate the CastManager object and set the field
 
 
 #Controlling content
-The CastManager object has methods to control the casting media.  In the code below, we're addin 
-g a click handler to the play button which plays the cast media.
+The CastManager object has methods to control the casting media.  In the code below, we're adding 
+a click handler to the play button which plays the cast media.
 
     playButton.addEventListener('click', function() {
       if (castManager.hasCastSession()){
