@@ -344,7 +344,7 @@ This element will also sync local state with the chromecast state via castManage
         },
         hasCastSession: function() {
           return (Object.keys(this.session).length > 0
-          && this.session.state === chrome.cast.SessionStatus.CONNECTED);
+          && this.session.status === chrome.cast.SessionStatus.CONNECTED);
         }
       };
       cast.CastManager = CastManager;
