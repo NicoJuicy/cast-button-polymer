@@ -465,8 +465,6 @@ This element will also sync local state with the chromecast state via castManage
 
     Polymer("cast-button", {
       display: false,
-      // Autoplay at all times ie. when local video is paused then casted
-      autoplay: false,
       // Counter representing which arc to overlay when connecting
       connectingCounter: -1,
       // Interval Id to animate the arc during connection
@@ -609,7 +607,9 @@ This element will also sync local state with the chromecast state via castManage
       onRequestSessionSuccess: function(session) {
         console.log('Launch success');
         this.setMediaSession(session);
-        this.loadMedia(this.castManager.localMedia, this.autoplay);
+        if (this.castmanager.localMedia.state === cast.Media.STATE.PLAY) {
+          this.loadMedia(this.castManager.localMedia, true);
+        }
       },
       onLaunchError: function(e) {
         console.log('Launch error: ' + JSON.stringify(e));
@@ -740,7 +740,7 @@ This element will also sync local state with the chromecast state via castManage
        * Helper function that returns true if the request is actionable by cast.
        */
       isCastActionable: function(data) {
-        return !!((!this.castManager.hasCastSession()
+        return !!((this.castManager.hasCastSession()
         && this.castManager.hasCastMedia()
         && (this.castManager.isMediaMatch()
         && data.sender !== cast.CastManager.SENDER.CHROMECAST))

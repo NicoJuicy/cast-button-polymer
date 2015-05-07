@@ -19,6 +19,5 @@
   },
   "_source": "git://github.com/Polymer/core-tooltip.git",
   "_target": "~0.5.5",
-  "_originalSource": "Polymer/core-tooltip",
-  "_direct": true
+  "_originalSource": "Polymer/core-tooltip"
 }
