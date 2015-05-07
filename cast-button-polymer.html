@@ -740,7 +740,7 @@ This element will also sync local state with the chromecast state via castManage
        * Helper function that returns true if the request is actionable by cast.
        */
       isCastActionable: function(data) {
-        return !!((!this.castManager.hasCastSession()
+        return !!((this.castManager.hasCastSession()
         && this.castManager.hasCastMedia()
         && (this.castManager.isMediaMatch()
         && data.sender !== cast.CastManager.SENDER.CHROMECAST))
