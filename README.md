@@ -30,7 +30,7 @@ Once a cast connection is established the button is overlayed in blue.
 When connected, you can use the CastManager methods to control the casting content.
 
 For a sample of the cast button, take a look at the 
-[CastVideos-material](https://github.com/googlecast/CastVideos-material) sample.
+[CastVideos-chrome-material](https://github.com/googlecast/CastVideos-chrome-material) sample.
 
 #Setup
 Use [Bower](http://bower.io/) to include the cast-button in your web app.  The following command 
