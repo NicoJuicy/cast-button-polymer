@@ -607,7 +607,7 @@ This element will also sync local state with the chromecast state via castManage
       onRequestSessionSuccess: function(session) {
         console.log('Launch success');
         this.setMediaSession(session);
-        if (this.castmanager.localMedia.state === cast.Media.STATE.PLAY) {
+        if (this.castManager.localMedia.state === cast.Media.STATE.PLAY) {
           this.loadMedia(this.castManager.localMedia, true);
         }
       },
